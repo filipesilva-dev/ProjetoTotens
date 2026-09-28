@@ -1,0 +1,1 @@
+import{j as e,c as a}from"./index-BF6MHzV_.js";function p({current:t,total:r=4}){return e.jsx("div",{className:"steps","aria-hidden":"true",children:Array.from({length:r}).map((n,s)=>e.jsx("span",{className:a("steps__dot",s<=t&&"steps__dot--active")},s))})}export{p as P};

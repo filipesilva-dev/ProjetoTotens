@@ -1,14 +1,7 @@
-# Grupo 3 - Aula Teste de Software
--Ana Carolina Gontijo Vilela Dias
+# FastLanches · Totem de Autoatendimento (Pix)
 
--André Vinícius Guedes Martins
-
--Filipe Silva da Fonseca
-
--Gabriel Cézar Peres Matos
-
--Gabriel Victor Vidal de Sales
-
-## Figma
-
-https://www.figma.com/design/bCp54BlAOyNyNEVF3zTpAi/Sistema-totens?t=5tS3MjeqNyTR0h0b-1
+Frontend do sistema **FastLanches** — totem focado em pedidos rápidos com
+pagamento **exclusivamente via Pix**. O front é preparado para backend
+FastAPI + PostgreSQL: toda comunicação passa por `src/services/*` e hooks
+tipados (`useProducts`, `useCategories`). Basta setar
+`VITE_USE_MOCKS=false` no `.env` quando a API estiver no ar.

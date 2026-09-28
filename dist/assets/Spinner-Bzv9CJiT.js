@@ -1,0 +1,1 @@
+import{j as e}from"./index-BF6MHzV_.js";function n({size:s=48,label:r}){return e.jsxs("div",{className:"spinner",role:"status","aria-live":"polite",children:[e.jsx("div",{className:"spinner__circle",style:{width:s,height:s,borderWidth:Math.max(3,s/12)}}),r&&e.jsx("span",{className:"spinner__label",children:r})]})}export{n as S};

@@ -1,0 +1,5 @@
+.card{background:var(--color-surface);border-radius:var(--radius-md)}
+.card--raised{box-shadow:var(--shadow-md);border:1px solid var(--color-border)}
+.card--flat{background:var(--color-surface-2)}
+.card--outline{border:2px solid var(--color-border)}
+.card--pad-sm{padding:var(--space-3)}.card--pad-md{padding:var(--space-5)}.card--pad-lg{padding:var(--space-8)}

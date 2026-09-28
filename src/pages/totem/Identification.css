@@ -1,0 +1,48 @@
+.id__head { display: flex; flex-direction: column; gap: var(--space-2); }
+
+/* CTA principal: pular identificação */
+.id__skip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5) var(--space-6);
+  background: var(--gradient-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-primary);
+  text-align: left;
+  transition: transform var(--transition-fast), box-shadow var(--transition-normal);
+}
+.id__skip:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.id__skip:active { transform: scale(.99); }
+
+.id__skip-icon {
+  width: clamp(52px, 5.5vmin, 68px);
+  height: clamp(52px, 5.5vmin, 68px);
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.22);
+  display: flex; align-items: center; justify-content: center;
+  font-size: clamp(24px, 2.6vmin, 32px);
+}
+
+.id__skip-text { flex: 1; min-width: 0; }
+.id__skip-arrow { font-size: clamp(24px, 2.6vmin, 34px); font-weight: var(--font-weight-black); color: #fff; }
+
+/* Divisor "ou ..." */
+.id__divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-soft);
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.id__divider::before,
+.id__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
