@@ -6,11 +6,13 @@ Totem de autoatendimento para lanchonetes com pagamento via Pix. Este repositór
 # Deploy temporário
 
 Pagina do Totem
+
 https://projeto-totens.vercel.app/welcome
 
 ---
 
 Pagina do Admin
+
 https://projeto-totens.vercel.app/admin
 
 para ver da forma correta a resolução deve estar em 1080×1920 (Uma tv 1080p na vertical)
