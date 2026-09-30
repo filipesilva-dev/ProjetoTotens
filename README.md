@@ -7,7 +7,9 @@ Totem de autoatendimento para lanchonetes com pagamento via Pix. Este repositór
 
 Pagina do Totem
 https://projeto-totens.vercel.app/welcome
+
 ---
+
 Pagina do Admin
 https://projeto-totens.vercel.app/admin
 
