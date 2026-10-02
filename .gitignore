@@ -1,0 +1,14 @@
+# Builds e caches
+node_modules/
+dist/
+node_modules/
+*.tsbuildinfo
+
+# Python e Ambientes
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Arquivos de ambiente
+.env
