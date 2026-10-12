@@ -1,0 +1,14 @@
+.super { display: grid; grid-template-columns: 260px 1fr; min-height: 100vh; background: var(--color-super-bg); }
+.super__sidebar { display: flex; flex-direction: column; gap: var(--space-8); padding: var(--space-6); background: var(--color-super-sidebar); }
+.super__brand { display: flex; align-items: center; gap: var(--space-3); }
+.super__brand-logo { font-size: 32px; line-height: 1; }
+.super__brand-name { display: block; color: #fff; font-weight: var(--font-weight-black); font-size: var(--font-size-lg); }
+.super__brand-role { display: block; color: #94A3B8; font-size: var(--font-size-xs); margin-top: 2px; }
+.super__nav { display: flex; flex-direction: column; gap: var(--space-1); }
+.super__link { padding: var(--space-3) var(--space-4); color: #94A3B8; border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold); transition: background var(--transition-fast), color var(--transition-fast); }
+.super__link:hover { color: #fff; background: rgba(99, 102, 241, .15); }
+.super__link--active { background: var(--gradient-super); color: #fff; box-shadow: var(--shadow-super); }
+.super__logout { margin-top: auto; padding: var(--space-3); color: #94A3B8; text-align: left; font-weight: var(--font-weight-semibold); }
+.super__logout:hover { color: #fff; }
+.super__main { padding: var(--space-8); overflow-x: hidden; }

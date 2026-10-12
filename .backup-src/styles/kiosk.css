@@ -1,0 +1,48 @@
+/* =============================================================================
+ * kiosk.css — Overrides aplicados apenas dentro de `body.kiosk`.
+ * -----------------------------------------------------------------------------
+ * Alvo primário: TV vertical 1080 × 1920 (totem de autoatendimento).
+ *
+ * Por que sobrescrever tokens:
+ *  - O usuário lê a ~50–70 cm de distância — precisamos de tipografia maior
+ *    e alvos de toque ≥ 60 px.
+ *  - O admin usa escala "de escritório" (16 px); o totem usa escala "pública".
+ *
+ * Estratégia de responsividade:
+ *  - Todos os overrides usam `min(...)` ou `clamp()` para não estourar
+ *    em telas maiores que 1080 px (a TV da loja).
+ *  - Grids usam `auto-fill` para se adaptar a qualquer largura.
+ * ========================================================================== */
+
+body.kiosk {
+  /* Tipografia — proporcional a 1080px de largura */
+  --font-size-xs:  clamp(11px, 1.02vmin, 14px);
+  --font-size-sm:  clamp(13px, 1.20vmin, 16px);
+  --font-size-md:  clamp(16px, 1.55vmin, 20px);
+  --font-size-lg:  clamp(19px, 1.85vmin, 24px);
+  --font-size-xl:  clamp(22px, 2.15vmin, 28px);
+  --font-size-2xl: clamp(28px, 2.85vmin, 36px);
+  --font-size-3xl: clamp(34px, 3.55vmin, 46px);
+  --font-size-4xl: clamp(44px, 4.90vmin, 64px);
+
+  /* Espaçamento — cresce junto com o texto */
+  --space-1:  4px;
+  --space-2:  clamp(8px, 0.85vmin, 12px);
+  --space-3:  clamp(12px, 1.15vmin, 16px);
+  --space-4:  clamp(16px, 1.55vmin, 22px);
+  --space-5:  clamp(20px, 1.95vmin, 28px);
+  --space-6:  clamp(24px, 2.35vmin, 32px);
+  --space-8:  clamp(32px, 3.15vmin, 44px);
+  --space-10: clamp(40px, 3.90vmin, 56px);
+  --space-12: clamp(48px, 4.60vmin, 68px);
+  --space-16: clamp(64px, 6.20vmin, 92px);
+
+  /* Layout */
+  --layout-header-h: clamp(100px, 7.20vmin, 130px);
+  --layout-sidebar-w: clamp(220px, 24.10vmin, 280px);
+}
+
+/* Alvos de toque — mínimo 60px dentro do totem */
+body.kiosk .btn--lg { min-height: clamp(60px, 6.00vmin, 80px); padding-left: clamp(24px, 3.10vmin, 40px); padding-right: clamp(24px, 3.10vmin, 40px); }
+body.kiosk .btn--xl { min-height: clamp(76px, 7.60vmin, 96px); padding-left: clamp(32px, 4.10vmin, 52px); padding-right: clamp(32px, 4.10vmin, 52px); }
+body.kiosk .btn--md { min-height: clamp(52px, 5.10vmin, 68px); }

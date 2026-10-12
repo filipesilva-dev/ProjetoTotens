@@ -6,11 +6,11 @@ import './Modal.css';
 export interface ModalProps {
   open: boolean; title: string; description?: ReactNode;
   confirmLabel?: string; cancelLabel?: string;
-  variant?: 'default'|'danger';
+  variant?: 'default' | 'danger';
   onConfirm: () => void; onCancel: () => void;
 }
-export function Modal({ open, title, description, confirmLabel='Confirmar', cancelLabel='Cancelar',
-  variant='default', onConfirm, onCancel }: ModalProps) {
+export function Modal({ open, title, description, confirmLabel = 'Confirmar', cancelLabel = 'Cancelar',
+  variant = 'default', onConfirm, onCancel }: ModalProps) {
   useEffect(() => {
     if (!open) return;
     const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onCancel(); };

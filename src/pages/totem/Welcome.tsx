@@ -13,7 +13,7 @@ export default function Welcome() {
         <div className="welcome__badge"><span>⚡ Pagamento via Pix</span></div>
       </div>
       <div className="welcome__cta">
-        <Button size="xl" fullWidth onClick={() => nav('/menu')}>Iniciar pedido</Button>
+        <Button size="xl" fullWidth onClick={() => nav('/totem/menu')}>Iniciar pedido</Button>
         <Text tone="soft" size="sm" style={{ textAlign: 'center', marginTop: 16 }}>Toque para começar</Text>
       </div>
     </div>

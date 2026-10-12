@@ -13,34 +13,25 @@ export default function Cart() {
   const remove = useCartStore((s) => s.remove);
   const subtotal = useCartStore((s) => s.subtotal());
   const [toRemove, setToRemove] = useState<CartItem | null>(null);
-  if (items.length === 0) { nav('/cart-empty', { replace: true }); return null; }
+  if (items.length === 0) { nav('/totem/cart-empty', { replace: true }); return null; }
   return (
     <div className="cart">
       <Text as="h1" size="3xl" weight="black">Seu carrinho</Text>
       <div className="cart__list">
-        {items.map((i) => (
-          <CartItemRow key={i.productId} item={i}
-            onQuantityChange={updateQuantity} onRemove={setToRemove} />
-        ))}
+        {items.map((i) => <CartItemRow key={i.productId} item={i} onQuantityChange={updateQuantity} onRemove={setToRemove} />)}
       </div>
       <div className="cart__totals">
-        <div className="cart__line">
-          <Text tone="muted">Subtotal</Text><Text>{formatBRL(subtotal)}</Text>
-        </div>
+        <div className="cart__line"><Text tone="muted">Subtotal</Text><Text>{formatBRL(subtotal)}</Text></div>
         <div className="cart__line cart__line--total">
           <Text weight="black" size="xl">Total</Text>
           <Text weight="black" size="xl" tone="primary">{formatBRL(subtotal)}</Text>
         </div>
       </div>
       <div className="cart__footer">
-        <Button variant="ghost" size="lg" onClick={() => nav('/menu')}>Continuar comprando</Button>
-        <Button size="lg" onClick={() => nav('/identification')}>Finalizar pedido</Button>
+        <Button variant="ghost" size="lg" onClick={() => nav('/totem/menu')}>Continuar comprando</Button>
+        <Button size="lg" onClick={() => nav('/totem/identification')}>Finalizar pedido</Button>
       </div>
-      <Modal open={Boolean(toRemove)} title="Remover item?"
-        description="Tem certeza que deseja remover este item do carrinho?"
-        confirmLabel="Remover" variant="danger"
-        onConfirm={() => { if (toRemove) remove(toRemove.productId); setToRemove(null); }}
-        onCancel={() => setToRemove(null)} />
+      <Modal open={Boolean(toRemove)} title="Remover item?" description="Tem certeza que deseja remover este item do carrinho?" confirmLabel="Remover" variant="danger" onConfirm={() => { if (toRemove) remove(toRemove.productId); setToRemove(null); }} onCancel={() => setToRemove(null)} />
     </div>
   );
 }

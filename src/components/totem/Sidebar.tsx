@@ -2,12 +2,9 @@ import type { Category } from '@/types';
 import { CATEGORY_ICONS, IconCatAll } from '@/components/ui';
 import { cn } from '@/utils/cn';
 import './Sidebar.css';
-export interface SidebarProps {
-  categories: Category[];
-  activeId: string | null;
-  onSelect: (id: string | null) => void;
-}
-export function Sidebar({ categories, activeId, onSelect }: SidebarProps) {
+export function Sidebar({ categories, activeId, onSelect }: {
+  categories: Category[]; activeId: string | null; onSelect: (id: string | null) => void;
+}) {
   return (
     <nav className="side" aria-label="Categorias">
       <button type="button" className={cn('side__item', activeId === null && 'side__item--active')} onClick={() => onSelect(null)}>

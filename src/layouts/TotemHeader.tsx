@@ -1,12 +1,9 @@
 import { IconCart, IconMenu, Text } from '@/components/ui';
 import { BRAND } from '@/config/brand';
 import './TotemHeader.css';
-export interface TotemHeaderProps {
-  cartCount: number;
-  onMenuClick: () => void;
-  onCartClick: () => void;
-}
-export function TotemHeader({ cartCount, onMenuClick, onCartClick }: TotemHeaderProps) {
+export function TotemHeader({ cartCount, onMenuClick, onCartClick }: {
+  cartCount: number; onMenuClick: () => void; onCartClick: () => void;
+}) {
   return (
     <header className="thead">
       <button className="thead__icon" onClick={onMenuClick} aria-label="Menu"><IconMenu /></button>

@@ -1,14 +1,21 @@
 import axios, { AxiosError, type AxiosInstance } from 'axios';
 import type { ApiError } from '@/types';
 import { ENV } from '@/config/env';
+
 export const api: AxiosInstance = axios.create({
-  baseURL: ENV.apiUrl, timeout: 15000, headers: { 'Content-Type': 'application/json' },
+  baseURL: ENV.apiUrl,
+  timeout: 15000,
+  headers: { 'Content-Type': 'application/json' },
 });
+
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem('fastlanches.token');
   if (token) config.headers.Authorization = `Bearer ${token}`;
+  const tenant = localStorage.getItem('fastlanches.tenant');
+  if (tenant) config.headers['X-Tenant'] = tenant;
   return config;
 });
+
 api.interceptors.response.use(
   (r) => r,
   (error: AxiosError<{ detail?: string }>) => {

@@ -1,0 +1,103 @@
+import type { Order } from '@/types';
+
+/**
+ * Mock de pedidos para o admin.
+ * Quando o backend estiver pronto, isso vira `ordersService.list()`.
+ */
+export const MOCK_ORDERS: Order[] = [
+  {
+    id: 'o-001',
+    code: '042',
+    status: 'READY',
+    totemId: 'Totem 1',
+    createdAt: new Date(Date.now() - 2 * 60 * 1000).toISOString(),
+    subtotal: 51.9,
+    total: 51.9,
+    customer: { cpf: '123.456.789-00' },
+    items: [
+      {
+        productId: 'c1', quantity: 1, unitPrice: 39.9,
+        removedIngredients: [], additions: [], notes: 'Sem cebola',
+        product: { id: 'c1', name: 'Combo Clássico', description: '', price: 39.9,
+          imageUrl: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'combos', available: true },
+      },
+      {
+        productId: 'de1', quantity: 1, unitPrice: 12,
+        removedIngredients: [], additions: [],
+        product: { id: 'de1', name: 'Sundae', description: '', price: 12,
+          imageUrl: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'desserts', available: true },
+      },
+    ],
+  },
+  {
+    id: 'o-002',
+    code: '041',
+    status: 'PREPARING',
+    totemId: 'Totem 2',
+    createdAt: new Date(Date.now() - 8 * 60 * 1000).toISOString(),
+    subtotal: 39,
+    total: 39,
+    items: [
+      {
+        productId: 'b2', quantity: 1, unitPrice: 32,
+        removedIngredients: ['Cebola'], additions: [],
+        product: { id: 'b2', name: 'X-Bacon', description: '', price: 32,
+          imageUrl: 'https://images.unsplash.com/photo-1553979459-d2229ba7433a?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'burgers', available: true },
+      },
+      {
+        productId: 'd1', quantity: 1, unitPrice: 7,
+        removedIngredients: [], additions: [],
+        product: { id: 'd1', name: 'Coca-Cola Lata', description: '', price: 7,
+          imageUrl: 'https://images.unsplash.com/photo-1554866585-cd94860890b7?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'drinks', available: true },
+      },
+    ],
+  },
+  {
+    id: 'o-003',
+    code: '040',
+    status: 'PAID',
+    totemId: 'Totem 1',
+    createdAt: new Date(Date.now() - 15 * 60 * 1000).toISOString(),
+    subtotal: 36,
+    total: 36,
+    customer: { email: 'cliente@exemplo.com' },
+    items: [
+      {
+        productId: 's2', quantity: 2, unitPrice: 18,
+        removedIngredients: [], additions: [],
+        product: { id: 's2', name: 'Batata Média', description: '', price: 18,
+          imageUrl: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'sides', available: true },
+      },
+    ],
+  },
+  {
+    id: 'o-004',
+    code: '039',
+    status: 'DELIVERED',
+    totemId: 'Totem 1',
+    createdAt: new Date(Date.now() - 45 * 60 * 1000).toISOString(),
+    subtotal: 74.9,
+    total: 74.9,
+    items: [
+      {
+        productId: 'b4', quantity: 1, unitPrice: 38,
+        removedIngredients: [], additions: [{ id: 'a3', name: 'Ovo', price: 3 }],
+        product: { id: 'b4', name: 'X-Tudo', description: '', price: 38,
+          imageUrl: 'https://images.unsplash.com/photo-1550547660-d9450f859349?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'burgers', available: true },
+      },
+      {
+        productId: 'b5', quantity: 1, unitPrice: 34,
+        removedIngredients: [], additions: [],
+        product: { id: 'b5', name: 'Smash Duplo', description: '', price: 34,
+          imageUrl: 'https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=200&q=60&auto=format&fit=crop',
+          categoryId: 'burgers', available: true },
+      },
+    ],
+  },
+];

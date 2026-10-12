@@ -4,7 +4,7 @@ import { Spinner, Text } from '@/components/ui';
 import { BRAND } from '@/config/brand';
 export default function Splash() {
   const nav = useNavigate();
-  useEffect(() => { const t = setTimeout(() => nav('/welcome'), 2000); return () => clearTimeout(t); }, [nav]);
+  useEffect(() => { const t = setTimeout(() => nav('/totem/welcome'), 2000); return () => clearTimeout(t); }, [nav]);
   return (
     <div className="screen screen--center" style={{ background: 'var(--gradient-hero)', color: '#fff' }}>
       <div style={{ fontSize: 120, lineHeight: 1 }}>🍔</div>

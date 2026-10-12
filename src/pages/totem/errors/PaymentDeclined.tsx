@@ -4,19 +4,16 @@ export default function PaymentDeclined() {
   const nav = useNavigate();
   return (
     <div className="screen screen--narrow">
-      <div style={{ width: 90, height: 90, borderRadius: '50%',
-        background: 'var(--color-danger-soft)', color: 'var(--color-danger)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
+      <div style={{ width: 90, height: 90, borderRadius: '50%', background: 'var(--color-danger-soft)', color: 'var(--color-danger)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto' }}>
         <IconX size={50} />
       </div>
       <Text as="h1" size="3xl" weight="black" style={{ textAlign: 'center' }}>Pagamento recusado</Text>
-      <Text tone="muted" style={{ textAlign: 'center' }}>Não foi possível processar o pagamento. Tente novamente.</Text>
       <Card variant="flat" padding="md">
         <Text weight="bold">Seu pedido está salvo</Text>
         <Text tone="muted" size="sm">Você pode tentar novamente.</Text>
       </Card>
       <Button size="lg" fullWidth onClick={() => nav(-1)}>Voltar</Button>
-      <Button variant="ghost" size="lg" fullWidth onClick={() => nav('/welcome')}>Iniciar novo pedido</Button>
+      <Button variant="ghost" size="lg" fullWidth onClick={() => nav('/totem/welcome')}>Iniciar novo pedido</Button>
     </div>
   );
 }

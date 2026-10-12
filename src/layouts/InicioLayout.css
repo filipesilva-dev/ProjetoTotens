@@ -1,0 +1,24 @@
+.inicio { min-height: 100vh; display: flex; flex-direction: column; background: #fff; }
+.inicio__header { position: sticky; top: 0; z-index: 50; display: flex; align-items: center;
+  justify-content: space-between; gap: var(--space-8); padding: var(--space-4) var(--space-10);
+  background: rgba(255, 255, 255, .94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--color-border); }
+.inicio__brand { display: flex; align-items: center; gap: var(--space-3); }
+.inicio__brand-logo { font-size: 32px; line-height: 1; }
+.inicio__brand-name { font-size: var(--font-size-xl); font-weight: var(--font-weight-black); }
+.inicio__nav { display: flex; gap: var(--space-8); }
+.inicio__link { font-weight: var(--font-weight-semibold); color: var(--color-text-muted); }
+.inicio__link:hover { color: var(--color-text); }
+.inicio__link--active { color: var(--color-primary); }
+.inicio__actions { display: flex; align-items: center; gap: var(--space-4); }
+.inicio__login { font-weight: var(--font-weight-semibold); }
+.inicio__cta { padding: var(--space-3) var(--space-5); background: var(--gradient-primary); color: #fff;
+  border-radius: var(--radius-pill); font-weight: var(--font-weight-bold); }
+.inicio__main { flex: 1; }
+.inicio__footer { padding: var(--space-12) var(--space-10) var(--space-6); background: var(--color-surface-2); border-top: 1px solid var(--color-border); }
+.inicio__footer-cols { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-8); max-width: 1200px; margin: 0 auto var(--space-8); }
+.inicio__footer-brand { display: flex; flex-direction: column; gap: var(--space-2); }
+.inicio__footer-col { display: flex; flex-direction: column; gap: var(--space-3); }
+.inicio__footer-link { color: var(--color-text-muted); font-size: var(--font-size-sm); }
+.inicio__footer-link:hover { color: var(--color-primary); }
+.inicio__footer-bottom { text-align: center; padding-top: var(--space-6); border-top: 1px solid var(--color-border); max-width: 1200px; margin: 0 auto; }
+@media (max-width: 720px) { .inicio__header { padding: var(--space-3) var(--space-4); gap: var(--space-4); } .inicio__nav { display: none; } .inicio__footer-cols { grid-template-columns: 1fr 1fr; } }

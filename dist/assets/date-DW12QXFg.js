@@ -1,0 +1,1 @@
+function n(t){return new Date(t).toLocaleDateString("pt-BR",{day:"2-digit",month:"short",year:"numeric"})}function a(t){const e=new Date(t).getTime()-Date.now();return Math.ceil(e/(24*3600*1e3))}export{a as d,n as f};

@@ -1,0 +1,6 @@
+.isb { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: var(--radius-pill); }
+.isb--info { background: var(--color-secondary-soft); color: var(--color-secondary); }
+.isb--success { background: var(--color-success-soft); color: var(--color-success); }
+.isb--danger { background: var(--color-danger-soft); color: var(--color-danger); }
+.isb--warning { background: var(--color-accent-soft); color: var(--color-accent-dark); }
+.isb--muted { background: var(--color-surface-2); color: var(--color-text-muted); }

@@ -1,0 +1,5 @@
+.spinner{display:inline-flex;flex-direction:column;align-items:center;gap:var(--space-3)}
+.spinner__circle{border-style:solid;border-color:var(--color-border);border-top-color:var(--color-primary);
+  border-radius:50%;animation:spin .9s linear infinite}
+.spinner__label{color:var(--color-text-muted);font-weight:var(--font-weight-semibold)}
+@keyframes spin{to{transform:rotate(360deg)}}

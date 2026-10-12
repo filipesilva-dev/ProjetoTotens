@@ -10,8 +10,8 @@ export default function InvoiceEmail() {
   const [email, setEmailLocal] = useState('');
   const [error, setError] = useState<string | undefined>();
   const handleConfirm = () => {
-    if (!isValidEmail(email)) { setError('Email inválido — verifique'); return; }
-    setEmail(email); nav('/invoice-email/confirm');
+    if (!isValidEmail(email)) { setError('Email inválido'); return; }
+    setEmail(email); nav('/totem/invoice-email/confirm');
   };
   return (
     <div className="screen screen--narrow">

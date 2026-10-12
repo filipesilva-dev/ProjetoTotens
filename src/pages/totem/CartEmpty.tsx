@@ -7,7 +7,7 @@ export default function CartEmpty() {
       <div style={{ color: 'var(--color-border-strong)' }}><IconCart size={140} /></div>
       <Text as="h1" size="3xl" weight="black">Carrinho vazio</Text>
       <Text tone="muted">Adicione itens para começar</Text>
-      <Button size="lg" onClick={() => nav('/menu')}>Ver cardápio</Button>
+      <Button size="lg" onClick={() => nav('/totem/menu')}>Ver cardápio</Button>
     </div>
   );
 }

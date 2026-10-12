@@ -9,8 +9,8 @@ export function useProducts() {
     let alive = true;
     setLoading(true);
     productsService.list()
-      .then((data) => { if (alive) { setProducts(data); setError(null); } })
-      .catch((e) => { if (alive) setError(e?.detail ?? 'Erro ao carregar produtos'); })
+      .then((d) => { if (alive) { setProducts(d); setError(null); } })
+      .catch((e) => { if (alive) setError(e?.detail ?? 'Erro'); })
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
   }, []);

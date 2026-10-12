@@ -4,16 +4,12 @@ export default function OrderConfirmed() {
   const nav = useNavigate();
   return (
     <div className="screen screen--center">
-      <div style={{ width: 120, height: 120, borderRadius: '50%',
-        background: 'var(--gradient-primary)', color: '#fff',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        boxShadow: 'var(--shadow-primary)' }}>
+      <div style={{ width: 120, height: 120, borderRadius: '50%', background: 'var(--gradient-primary)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <IconCheck size={70} />
       </div>
       <Text as="h1" size="3xl" weight="black">Pedido confirmado!</Text>
       <Text tone="muted">Sua senha de retirada é</Text>
-      <div style={{ padding: '24px 64px', borderRadius: 24, background: 'var(--gradient-warm)',
-        boxShadow: 'var(--shadow-accent)' }}>
+      <div style={{ padding: '24px 64px', borderRadius: 24, background: 'var(--gradient-warm)' }}>
         <Text weight="black" style={{ fontSize: 160, lineHeight: 1, color: '#fff', letterSpacing: -6 }}>042</Text>
       </div>
       <Text tone="muted">Aguarde ser chamado no balcão</Text>
@@ -22,8 +18,8 @@ export default function OrderConfirmed() {
         <Text weight="bold" size="lg">8 a 12 minutos</Text>
       </Card>
       <div style={{ display: 'flex', gap: 'var(--space-4)' }}>
-        <Button variant="ghost" size="lg" onClick={() => nav('/order/printing')}>🖨 Comprovante</Button>
-        <Button size="lg" onClick={() => nav('/welcome')}>Novo pedido</Button>
+        <Button variant="ghost" size="lg" onClick={() => nav('/totem/order/printing')}>🖨 Comprovante</Button>
+        <Button size="lg" onClick={() => nav('/totem/welcome')}>Novo pedido</Button>
       </div>
     </div>
   );

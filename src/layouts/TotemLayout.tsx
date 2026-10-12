@@ -11,15 +11,15 @@ export function TotemLayout() {
     document.body.classList.add('kiosk');
     return () => document.body.classList.remove('kiosk');
   }, []);
-  const hideHeader = ['/splash', '/welcome', '/payment/processing', '/payment/approved',
-    '/order/confirmed', '/order/printing'].includes(location.pathname)
-    || location.pathname.startsWith('/error/');
+  const hideHeader = ['/totem/splash', '/totem/welcome', '/totem/payment/processing',
+    '/totem/payment/approved', '/totem/order/confirmed', '/totem/order/printing'].includes(location.pathname)
+    || location.pathname.startsWith('/totem/error/');
   return (
     <div className="tlayout">
       {!hideHeader && (
         <TotemHeader cartCount={count}
-          onMenuClick={() => navigate('/menu')}
-          onCartClick={() => navigate('/cart')} />
+          onMenuClick={() => navigate('/totem/menu')}
+          onCartClick={() => navigate('/totem/cart')} />
       )}
       <main className="tlayout__main"><Outlet /></main>
     </div>

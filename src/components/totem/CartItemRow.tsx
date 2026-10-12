@@ -2,12 +2,11 @@ import type { CartItem } from '@/types';
 import { QuantitySelector, Text } from '@/components/ui';
 import { formatBRL } from '@/utils/currency';
 import './CartItemRow.css';
-export interface CartItemRowProps {
+export function CartItemRow({ item, onQuantityChange, onRemove }: {
   item: CartItem;
   onQuantityChange: (id: string, q: number) => void;
   onRemove: (item: CartItem) => void;
-}
-export function CartItemRow({ item, onQuantityChange, onRemove }: CartItemRowProps) {
+}) {
   return (
     <div className="citem">
       <div className="citem__img"><img src={item.product.imageUrl} alt="" /></div>

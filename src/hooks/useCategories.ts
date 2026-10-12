@@ -9,8 +9,8 @@ export function useCategories() {
     let alive = true;
     setLoading(true);
     categoriesService.list()
-      .then((data) => { if (alive) { setCategories(data); setError(null); } })
-      .catch((e) => { if (alive) setError(e?.detail ?? 'Erro ao carregar categorias'); })
+      .then((d) => { if (alive) { setCategories(d); setError(null); } })
+      .catch((e) => { if (alive) setError(e?.detail ?? 'Erro'); })
       .finally(() => { if (alive) setLoading(false); });
     return () => { alive = false; };
   }, []);

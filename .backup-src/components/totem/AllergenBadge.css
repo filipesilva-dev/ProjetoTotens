@@ -1,0 +1,21 @@
+.allergen{
+  display:flex;align-items:center;gap:var(--space-3);
+  padding:var(--space-3);
+  background:var(--color-surface);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);
+  transition:border-color var(--transition-fast);
+}
+.allergen:hover{border-color:var(--color-primary)}
+.allergen__icon{
+  width:40px;height:40px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;line-height:1;
+  background:var(--color-accent-soft);
+  border-radius:var(--radius-md);
+}
+.allergen__label{
+  font-weight:var(--font-weight-semibold);
+  font-size:var(--font-size-sm);
+  color:var(--color-text);
+}

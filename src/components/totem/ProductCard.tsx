@@ -2,8 +2,7 @@ import type { Product } from '@/types';
 import { Text } from '@/components/ui';
 import { formatBRL } from '@/utils/currency';
 import './ProductCard.css';
-export interface ProductCardProps { product: Product; onSelect: (p: Product) => void; }
-export function ProductCard({ product, onSelect }: ProductCardProps) {
+export function ProductCard({ product, onSelect }: { product: Product; onSelect: (p: Product) => void }) {
   return (
     <button type="button" className="pcard" onClick={() => onSelect(product)}
       disabled={!product.available} aria-label={`${product.name}, ${formatBRL(product.price)}`}>

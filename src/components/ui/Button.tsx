@@ -1,14 +1,14 @@
 import { forwardRef, type ButtonHTMLAttributes, type ReactNode } from 'react';
 import { cn } from '@/utils/cn';
 import './Button.css';
-export type ButtonVariant = 'primary'|'secondary'|'ghost'|'danger';
-export type ButtonSize = 'sm'|'md'|'lg'|'xl';
+export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'danger';
+export type ButtonSize = 'sm' | 'md' | 'lg' | 'xl';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant; size?: ButtonSize; loading?: boolean;
   leftIcon?: ReactNode; rightIcon?: ReactNode; fullWidth?: boolean;
 }
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { variant='primary', size='md', loading=false, leftIcon, rightIcon, fullWidth=false, className, children, disabled, ...rest }, ref
+  { variant = 'primary', size = 'md', loading = false, leftIcon, rightIcon, fullWidth = false, className, children, disabled, ...rest }, ref
 ) {
   return (
     <button ref={ref}

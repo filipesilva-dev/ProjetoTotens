@@ -1,0 +1,1 @@
+import{j as e,h as a}from"./index-DV525tTm.js";function p({current:t,total:r=4}){return e.jsx("div",{className:"steps","aria-hidden":"true",children:Array.from({length:r}).map((n,s)=>e.jsx("span",{className:a("steps__dot",s<=t&&"steps__dot--active")},s))})}export{p as P};

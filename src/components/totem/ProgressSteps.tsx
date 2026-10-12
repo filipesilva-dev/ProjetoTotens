@@ -1,7 +1,6 @@
 import { cn } from '@/utils/cn';
 import './ProgressSteps.css';
-export interface ProgressStepsProps { current: number; total?: number; }
-export function ProgressSteps({ current, total = 4 }: ProgressStepsProps) {
+export function ProgressSteps({ current, total = 4 }: { current: number; total?: number }) {
   return (
     <div className="steps" aria-hidden="true">
       {Array.from({ length: total }).map((_, i) => (

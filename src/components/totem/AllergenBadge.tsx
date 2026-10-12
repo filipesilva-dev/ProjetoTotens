@@ -1,12 +1,7 @@
 import type { Allergen } from '@/types';
 import { ALLERGEN_LABELS } from '@/config/allergens';
 import './AllergenBadge.css';
-
-export interface AllergenBadgeProps {
-  allergen: Allergen;
-}
-
-export function AllergenBadge({ allergen }: AllergenBadgeProps) {
+export function AllergenBadge({ allergen }: { allergen: Allergen }) {
   const info = ALLERGEN_LABELS[allergen];
   return (
     <div className="allergen" role="listitem">

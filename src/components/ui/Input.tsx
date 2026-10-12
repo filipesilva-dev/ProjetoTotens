@@ -4,10 +4,10 @@ import './Input.css';
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size'> {
   label?: string; hint?: string; error?: string;
   leftIcon?: ReactNode; rightIcon?: ReactNode;
-  size?: 'md'|'lg'|'xl'; containerClassName?: string;
+  size?: 'md' | 'lg' | 'xl'; containerClassName?: string;
 }
 export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
-  { label, hint, error, leftIcon, rightIcon, size='md', className, containerClassName, id, ...rest }, ref
+  { label, hint, error, leftIcon, rightIcon, size = 'md', className, containerClassName, id, ...rest }, ref
 ) {
   const autoId = useId();
   const inputId = id ?? `input-${autoId}`;

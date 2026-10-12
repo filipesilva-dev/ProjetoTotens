@@ -11,9 +11,7 @@ export default function ProductAdded() {
   return (
     <div className="screen" style={{ maxWidth: 1100, margin: '0 auto' }}>
       <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'center' }}>
-        <div style={{ width: 90, height: 90, borderRadius: '50%',
-          background: 'var(--color-success-soft)', color: 'var(--color-success)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ width: 90, height: 90, borderRadius: '50%', background: 'var(--color-success-soft)', color: 'var(--color-success)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <IconCheck size={50} />
         </div>
         <Text as="h1" size="3xl" weight="black">Produto inserido ao carrinho</Text>
@@ -23,8 +21,8 @@ export default function ProductAdded() {
         {suggestions.map((p) => <ProductCard key={p.id} product={p} onSelect={() => add(p)} />)}
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', gap: 'var(--space-4)' }}>
-        <Button variant="ghost" size="lg" onClick={() => nav('/menu')}>Voltar ao cardápio</Button>
-        <Button size="lg" onClick={() => nav('/cart')}>Ver carrinho</Button>
+        <Button variant="ghost" size="lg" onClick={() => nav('/totem/menu')}>Voltar ao cardápio</Button>
+        <Button size="lg" onClick={() => nav('/totem/cart')}>Ver carrinho</Button>
       </div>
     </div>
   );

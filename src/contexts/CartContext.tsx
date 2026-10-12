@@ -20,48 +20,31 @@ export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
       items: [], wantsInvoiceEmail: false,
-
       add: (product, opts = {}) => {
         const quantity = opts.quantity ?? 1;
         const removed = opts.removedIngredients ?? [];
         const additions = opts.additions ?? [];
         const notes = (opts.notes ?? '').trim();
-
-        // Duas linhas só se fundem se produto + removidos + adicionais + notas forem idênticos.
-        // Isso evita que pedidos com observações diferentes virem um só.
         const idx = get().items.findIndex((i) =>
           i.productId === product.id &&
           JSON.stringify(i.removedIngredients) === JSON.stringify(removed) &&
           JSON.stringify(i.additions) === JSON.stringify(additions) &&
           (i.notes ?? '') === notes
         );
-
         if (idx >= 0) {
           const items = [...get().items];
           items[idx] = { ...items[idx]!, quantity: items[idx]!.quantity + quantity };
           set({ items });
           return;
         }
-
         const extras = additions.reduce((s, a) => s + a.price, 0);
-        set({
-          items: [
-            ...get().items,
-            {
-              productId: product.id,
-              product,
-              quantity,
-              removedIngredients: removed,
-              additions,
-              notes: notes || undefined,
-              unitPrice: product.price + extras,
-            },
-          ],
-        });
+        set({ items: [...get().items, {
+          productId: product.id, product, quantity,
+          removedIngredients: removed, additions,
+          notes: notes || undefined, unitPrice: product.price + extras,
+        }]});
       },
-
-      updateQuantity: (id, q) => set({ items: get().items.map((i) =>
-        i.productId === id ? { ...i, quantity: Math.max(1, q) } : i) }),
+      updateQuantity: (id, q) => set({ items: get().items.map((i) => i.productId === id ? { ...i, quantity: Math.max(1, q) } : i) }),
       remove: (id) => set({ items: get().items.filter((i) => i.productId !== id) }),
       clear: () => set({ items: [], cpf: undefined, email: undefined, wantsInvoiceEmail: false }),
       setCpf: (cpf) => set({ cpf }),

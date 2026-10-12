@@ -28,7 +28,7 @@ export function AdminLayout() {
           ))}
         </nav>
         <button className="alayout__logout"
-          onClick={() => { logout(); navigate('/admin/login', { replace: true }); }}>
+          onClick={() => { logout(); navigate('/entrar', { replace: true }); }}>
           Sair
         </button>
       </aside>

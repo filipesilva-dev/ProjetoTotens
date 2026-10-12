@@ -30,13 +30,13 @@ export default function Menu() {
         ) : (
           <div className="menu__grid">
             {filtered.map((p) => (
-              <ProductCard key={p.id} product={p} onSelect={() => nav(`/product/${p.id}`)} />
+              <ProductCard key={p.id} product={p} onSelect={() => nav(`/totem/product/${p.id}`)} />
             ))}
           </div>
         )}
         {subtotal > 0 && (
           <div className="menu__cart-bar">
-            <Button size="lg" onClick={() => nav('/cart')} rightIcon={<span>→</span>}>
+            <Button size="lg" onClick={() => nav('/totem/cart')} rightIcon={<span>→</span>}>
               Ver carrinho · {formatBRL(subtotal)}
             </Button>
           </div>
