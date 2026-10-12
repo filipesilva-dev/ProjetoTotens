@@ -132,7 +132,7 @@ Em `src/styles/tokens.css`, um bloco novo no final:
 ## Como testar esta branch
 
 ```bash
-git checkout <nome-da-branch>
+git checkout multitenat
 npm install
 cp .env.example .env
 npm run dev
@@ -282,40 +282,3 @@ src/
     ├── invoice.ts                    ← NOVO
     └── index.ts                      ← MODIFICADO (reexporta os 3 novos)
 ```
-
----
-
-## Checklist para o PR
-
-Antes de abrir o pull request:
-
-- [ ] `npm run build` passa sem erro
-- [ ] `npm run typecheck` passa sem erro
-- [ ] Landing (`/`) carrega
-- [ ] Planos (`/planos`) carrega
-- [ ] Cadastro (`/cadastro`) carrega
-- [ ] Totem (`/totem/welcome`) navega até o Pix
-- [ ] Admin da loja (`/admin`) abre após login mock
-- [ ] Superadmin (`/superadmin`) abre após login com `admin@fastlanches.com` / `super123`
-- [ ] Nenhuma referência a "marketing" sobrou no código (busca por `marketing` retorna zero em `src/`)
-
-Verificação rápida da última:
-
-```bash
-grep -r "marketing" src/ || echo "nenhuma referência restante"
-```
-
----
-
-## Resumo para o commit
-
-> Adiciona a camada SaaS completa com quatro camadas de navegação:
-> site institucional em `/`, totem reorganizado sob `/totem/*`, painel
-> administrativo de loja em `/admin/*` e console interno em `/superadmin/*`.
->
-> Inclui tipos, mocks, services, hooks, contexts, layouts e páginas para
-> cada camada. Toda a UI roda com mocks e alterna para API real trocando
-> `VITE_USE_MOCKS` no `.env`.
->
-> Rotas do totem foram movidas de `/` para `/totem/` para liberar a raiz
-> para o site institucional. Nenhum componente do totem foi alterado.
