@@ -13,6 +13,13 @@ const Plans = lazy(() => import('@/pages/inicio/Plans'));
 const Signup = lazy(() => import('@/pages/inicio/Signup'));
 const Login = lazy(() => import('@/pages/inicio/Login'));
 const Checkout = lazy(() => import('@/pages/inicio/Checkout'));
+const Resources = lazy(() => import('@/pages/inicio/Resources'));
+const About = lazy(() => import('@/pages/inicio/About'));
+const Contact = lazy(() => import('@/pages/inicio/Contact'));
+const Terms = lazy(() => import('@/pages/inicio/Terms'));
+const Privacy = lazy(() => import('@/pages/inicio/Privacy'));
+const ForgotPassword = lazy(() => import('@/pages/inicio/ForgotPassword'));
+const SignupWelcome = lazy(() => import('@/pages/inicio/Welcome'));
 
 /* ─── TOTEM ─── */
 const Splash = lazy(() => import('@/pages/totem/Splash'));
@@ -77,11 +84,16 @@ export const routes: RouteObject[] = [
     children: [
       { index: true, element: wrap(<Home />) },
       { path: 'planos', element: wrap(<Plans />) },
-      { path: 'recursos', element: wrap(<Home />) },
-      { path: 'sobre', element: wrap(<Home />) },
+      { path: 'recursos', element: wrap(<Resources />) },
+      { path: 'sobre', element: wrap(<About />) },
       { path: 'cadastro', element: wrap(<Signup />) },
       { path: 'entrar', element: wrap(<Login />) },
       { path: 'checkout/:planoId', element: wrap(<Checkout />) },
+      { path: 'contato', element: wrap(<Contact />) },
+      { path: 'termos', element: wrap(<Terms />) },
+      { path: 'privacidade', element: wrap(<Privacy />) },
+      { path: 'recuperar-senha', element: wrap(<ForgotPassword />) },
+      { path: 'boas-vindas', element: wrap(<SignupWelcome />) },
     ],
   },
 

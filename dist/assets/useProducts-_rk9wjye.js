@@ -1,0 +1,1 @@
+import{r as e}from"./index-CcZ_bX2E.js";import{p as l}from"./products-CGtzkwuq.js";function d(){const[u,a]=e.useState([]),[c,s]=e.useState(!0),[i,o]=e.useState(null);return e.useEffect(()=>{let t=!0;return s(!0),l.list().then(r=>{t&&(a(r),o(null))}).catch(r=>{t&&o(r?.detail??"Erro")}).finally(()=>{t&&s(!1)}),()=>{t=!1}},[]),{products:u,loading:c,error:i}}export{d as u};

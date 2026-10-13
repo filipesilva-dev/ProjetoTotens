@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Text, Button } from '@/components/ui';
 import { PlanCard } from '@/components/inicio/PlanCard';
@@ -42,7 +43,7 @@ export default function Plans() {
       <section className="plans-page__help">
         <Text as="h3" size="2xl" weight="black">Ficou com dúvida?</Text>
         <Text tone="muted">Ajudamos a escolher o plano certo para sua operação.</Text>
-        <Button size="lg">Falar com vendas</Button>
+        <Link to="/contato"><Button size="lg">Falar com vendas</Button></Link>
       </section>
     </div>
   );

@@ -22,3 +22,6 @@ export {
 } from './Icon';
 
 export { ToggleSwitch } from '@/components/admin/ToggleSwitch';
+
+export { Toast } from './Toast';
+export type { ToastProps, ToastTone } from './Toast';

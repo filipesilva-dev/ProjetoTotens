@@ -1,0 +1,1 @@
+import{j as t,h as e}from"./index-CcZ_bX2E.js";function m({variant:a="raised",padding:r="md",className:s,children:d,...c}){return t.jsx("div",{className:e("card",`card--${a}`,`card--pad-${r}`,s),...c,children:d})}export{m as C};
