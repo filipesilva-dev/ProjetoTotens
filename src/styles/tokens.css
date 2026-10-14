@@ -1,0 +1,54 @@
+:root {
+  --color-primary: #F97316;
+  --color-primary-hover: #EA580C;
+  --color-primary-dark: #C2410C;
+  --color-primary-soft: #FFEDD5;
+  --color-on-primary: #FFFFFF;
+  --color-accent: #FBBF24;
+  --color-accent-soft: #FEF3C7;
+  --color-accent-dark: #D97706;
+  --color-danger: #DC2626;
+  --color-danger-soft: #FEE2E2;
+  --color-success: #16A34A;
+  --color-success-soft: #DCFCE7;
+  --color-secondary: #0284C7;
+  --color-secondary-soft: #E0F2FE;
+  --color-bg: #FFFBF5;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #FFF7ED;
+  --color-border: #FED7AA;
+  --color-border-strong: #FDBA74;
+  --color-text: #1C1917;
+  --color-text-muted: #57534E;
+  --color-text-soft: #A8A29E;
+  --color-text-inverse: #FFFFFF;
+  --gradient-primary: linear-gradient(135deg, #FB923C 0%, #F97316 50%, #EA580C 100%);
+  --gradient-warm: linear-gradient(135deg, #FBBF24 0%, #F97316 100%);
+  --gradient-hero: linear-gradient(135deg, #F97316 0%, #DC2626 100%);
+  --gradient-surface: linear-gradient(180deg, #FFFFFF 0%, #FFF7ED 100%);
+  --radius-sm: 10px; --radius-md: 18px; --radius-lg: 28px; --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(234,88,12,.08);
+  --shadow-md: 0 6px 20px rgba(234,88,12,.12);
+  --shadow-lg: 0 16px 40px rgba(234,88,12,.18);
+  --shadow-xl: 0 24px 60px rgba(234,88,12,.24);
+  --shadow-primary: 0 10px 28px rgba(249,115,22,.35);
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-size-xs: 12px; --font-size-sm: 14px; --font-size-md: 16px; --font-size-lg: 20px;
+  --font-size-xl: 24px; --font-size-2xl: 32px; --font-size-3xl: 40px; --font-size-4xl: 56px;
+  --font-weight-regular: 400; --font-weight-medium: 500; --font-weight-semibold: 600;
+  --font-weight-bold: 700; --font-weight-black: 900;
+  --line-height-normal: 1.4;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px;
+  --space-6: 24px; --space-8: 32px; --space-10: 40px; --space-12: 48px; --space-16: 64px;
+  --transition-fast: 150ms ease; --transition-normal: 250ms ease;
+
+  /* SuperAdmin */
+  --color-super-primary: #6366F1;
+  --color-super-primary-hover: #4F46E5;
+  --color-super-dark: #312E81;
+  --color-super-soft: #E0E7FF;
+  --color-super-bg: #F8FAFC;
+  --color-super-sidebar: #0F172A;
+  --gradient-super: linear-gradient(135deg, #818CF8 0%, #6366F1 50%, #4F46E5 100%);
+  --shadow-super: 0 10px 28px rgba(99, 102, 241, 0.30);
+}

@@ -1,0 +1,10 @@
+.signup { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--space-12); max-width: 1100px; margin: 0 auto; padding: var(--space-16) var(--space-10); }
+@media (max-width: 900px) { .signup { grid-template-columns: 1fr; } }
+.signup__panel { display: flex; flex-direction: column; gap: var(--space-6); padding: var(--space-8); background: #fff; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); }
+.signup__head { display: flex; flex-direction: column; gap: var(--space-2); }
+.signup__form { display: flex; flex-direction: column; gap: var(--space-4); }
+.signup__terms-check { display: flex; gap: var(--space-3); align-items: flex-start; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.signup__terms-check input { width: 20px; height: 20px; accent-color: var(--color-primary); }
+.signup__terms-check a { color: var(--color-primary); font-weight: var(--font-weight-semibold); text-decoration: underline; }
+.signup__side { display: flex; flex-direction: column; gap: var(--space-5); padding: var(--space-8); background: var(--gradient-hero); border-radius: var(--radius-lg); align-self: flex-start; }
+.signup__benefits { display: flex; flex-direction: column; gap: var(--space-3); list-style: none; padding: 0; color: #fff; font-weight: var(--font-weight-medium); }

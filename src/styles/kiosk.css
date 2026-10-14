@@ -1,0 +1,14 @@
+body.kiosk {
+  --font-size-xs: clamp(11px, 1.02vmin, 14px);
+  --font-size-sm: clamp(13px, 1.20vmin, 16px);
+  --font-size-md: clamp(16px, 1.55vmin, 20px);
+  --font-size-lg: clamp(19px, 1.85vmin, 24px);
+  --font-size-xl: clamp(22px, 2.15vmin, 28px);
+  --font-size-2xl: clamp(28px, 2.85vmin, 36px);
+  --font-size-3xl: clamp(34px, 3.55vmin, 46px);
+  --font-size-4xl: clamp(44px, 4.90vmin, 64px);
+  --space-4: clamp(16px, 1.55vmin, 22px);
+  --space-5: clamp(20px, 1.95vmin, 28px);
+  --space-6: clamp(24px, 2.35vmin, 32px);
+  --space-8: clamp(32px, 3.15vmin, 44px);
+}

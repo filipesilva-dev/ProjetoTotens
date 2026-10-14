@@ -1,0 +1,6 @@
+export interface Plan {
+  id: string; slug: string; name: string; description: string;
+  priceMonthly: number; priceYearly: number;
+  features: string[]; maxTotems: number; maxProducts: number;
+  highlighted: boolean; active: boolean; sortOrder: number;
+}

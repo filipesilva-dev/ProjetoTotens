@@ -1,0 +1,12 @@
+node_modules
+dist
+work
+.git
+.backup-src
+.admin-gerado
+documentosDoProjeto
+api/__pycache__
+api/.pytest_cache
+api/.venv
+.env
+

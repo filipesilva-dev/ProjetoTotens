@@ -1,0 +1,18 @@
+.checkout { max-width: 1200px; margin: 0 auto; padding: var(--space-12) var(--space-10); display: flex; flex-direction: column; gap: var(--space-8); }
+.checkout__head { display: flex; flex-direction: column; gap: var(--space-2); }
+.checkout__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(320px, 400px); gap: var(--space-6); align-items: start; }
+@media (max-width: 960px) { .checkout__grid { grid-template-columns: 1fr; } }
+.checkout__main { display: flex; flex-direction: column; gap: var(--space-6); }
+.checkout__side { position: sticky; top: 100px; }
+.checkout__cycle { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.checkout__cycle-opt { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-1); background: #fff; border: 2px solid var(--color-border); border-radius: var(--radius-md); text-align: left; }
+.checkout__cycle-opt--on { border-color: var(--color-primary); background: var(--color-primary-soft); }
+.checkout__methods { display: flex; flex-direction: column; gap: var(--space-3); }
+.checkout__method { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-4); background: #fff; border: 2px solid var(--color-border); border-radius: var(--radius-md); }
+.checkout__method--on { border-color: var(--color-primary); background: var(--color-primary-soft); }
+.checkout__method-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; background: var(--color-primary-soft); color: var(--color-primary); border-radius: var(--radius-md); font-size: 22px; }
+.checkout__coupon { flex: 1; }
+.checkout__line { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-4); margin-bottom: var(--space-4); }
+.checkout__divider { height: 1px; background: var(--color-border); margin: var(--space-4) 0; }
+.checkout__total { display: flex; justify-content: space-between; align-items: baseline; }
+.checkout__total--future { margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px dashed var(--color-border); }

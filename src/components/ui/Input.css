@@ -1,0 +1,38 @@
+.input { display: flex; flex-direction: column; gap: var(--space-2); }
+.input__label { font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); }
+.input__box { display: flex; align-items: center; gap: var(--space-2); padding: 0 var(--space-5);
+  background: var(--color-surface); border: 2px solid var(--color-border); border-radius: var(--radius-pill);
+  transition: border-color var(--transition-fast); }
+.input__box:focus-within { border-color: var(--color-primary); }
+.input__box--error { border-color: var(--color-danger); }
+.input__box--md { height: 52px; }
+.input__box--lg { height: 68px; }
+.input__box--xl { height: 88px; }
+.input__field { flex: 1; height: 100%; font-size: var(--font-size-md); outline: none; background: transparent; }
+.input__box--lg .input__field { font-size: var(--font-size-lg); }
+.input__box--xl .input__field { font-size: var(--font-size-xl); }
+.input__field::placeholder { color: var(--color-text-soft); }
+.input__icon { display: inline-flex; color: var(--color-text-soft); }
+.input__error { font-size: var(--font-size-sm); color: var(--color-danger); font-weight: var(--font-weight-semibold); }
+.input__hint { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+
+/* ─── REMOVE_DUPLO_FOCUS ────────────────────────────────────────────
+   O <input> interno (input__field) herdava o focus ring nativo do
+   navegador (Chrome ~M90+), que aparecia como uma SEGUNDA borda
+   laranja arredondada dentro da caixa. Aqui a gente mata esse
+   contorno em TODOS os estados, e deixa o indicador visual de foco
+   apenas na caixa externa (.input__box:focus-within).
+   Aplicado a todos os campos do app porque todos usam <Input>. */
+
+.input__field,
+.input__field:hover,
+.input__field:focus,
+.input__field:focus-visible,
+.input__field:active {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+}

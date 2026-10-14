@@ -1,0 +1,6 @@
+.tsb { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: var(--radius-pill); }
+.tsb--info { background: var(--color-secondary-soft); color: var(--color-secondary); }
+.tsb--success { background: var(--color-success-soft); color: var(--color-success); }
+.tsb--warning { background: var(--color-accent-soft); color: var(--color-accent-dark); }
+.tsb--danger { background: var(--color-danger-soft); color: var(--color-danger); }
+.tsb--muted { background: var(--color-surface-2); color: var(--color-text-muted); }
